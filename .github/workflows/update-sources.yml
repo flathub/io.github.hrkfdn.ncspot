@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          fetch-depth: 0
           submodules: true
       
       - id: manifestTagVersion
@@ -16,15 +17,16 @@ jobs:
       
       - uses: actions/checkout@v3
         with:
-          path: ncspot
+          path: ncspot-tagged
           repository: hrkfdn/ncspot
           ref: ${{ steps.manifestTagVersion.outputs.TAG_VERSION }}
       
       - name: Update cargo-sources.json
         run: |
           sudo apt-get update -y && sudo apt-get install -y python3-aiohttp python3-toml
-          python3 flatpak-builder-tools/cargo/flatpak-cargo-generator.py -o cargo-sources.json ncspot/Cargo.lock
-          rm -rf ncspot
+          python3 flatpak-builder-tools/cargo/flatpak-cargo-generator.py -o cargo-sources.json ncspot-tagged/Cargo.lock
+          rm -rf ncspot-tagged
+          [[ ! $(git status --porcelain) ]] && exit 0
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git add cargo-sources.json
