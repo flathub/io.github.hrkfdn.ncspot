@@ -16,6 +16,8 @@ finish-args:
   # mpris
   - --own-name=org.mpris.MediaPlayer2.ncspot
   - --talk-name=org.gnome.SessionManager
+  # config file
+  - --filesystem=xdg-config/ncspot:ro
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
 modules:
