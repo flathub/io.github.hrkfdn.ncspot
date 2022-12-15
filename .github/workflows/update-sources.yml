@@ -24,6 +24,7 @@ jobs:
         run: |
           sudo apt-get update -y && sudo apt-get install -y python3-aiohttp python3-toml
           python3 flatpak-builder-tools/cargo/flatpak-cargo-generator.py -o cargo-sources.json ncspot/Cargo.lock
+          rm -rf ncspot
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
           git add cargo-sources.json
