@@ -39,7 +39,7 @@ modules:
     buildsystem: simple
     build-commands:
       - cargo --offline fetch --manifest-path Cargo.toml
-      - cargo --offline build --release --locked
+      - cargo --offline build --release --locked --features cover
       - install -Dm 755 target/release/ncspot /app/bin/ncspot
       - desktop-file-edit --set-key=Icon --set-value=io.github.hrkfdn.ncspot misc/ncspot.desktop
       - install -Dm 644 misc/ncspot.desktop /app/share/applications/io.github.hrkfdn.ncspot.desktop
