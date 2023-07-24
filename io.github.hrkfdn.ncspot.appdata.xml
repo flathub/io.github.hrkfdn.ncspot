@@ -36,6 +36,7 @@
   </screenshots>
   <url type="homepage">https://github.com/hrkfdn/ncspot</url>
   <releases>
+    <release version="0.13.4" date="2023-07-24"/>
     <release version="0.13.3" date="2023-06-12"/>
     <release version="0.13.2" date="2023-05-06"/>
     <release version="0.13.1" date="2023-04-06"/>
