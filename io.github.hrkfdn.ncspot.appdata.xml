@@ -23,9 +23,7 @@
       You must have an existing premium Spotify subscription to use ncspot.
     </p>
   </description>
-  <developer>
-    <name>hrkfdn</name>
-  </developer>
+  <developer_name>hrkfdn</developer_name>
   <categories>
     <category>AudioVideo</category>
     <category>Audio</category>
