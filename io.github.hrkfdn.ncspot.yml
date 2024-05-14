@@ -27,8 +27,8 @@ modules:
       - cargo-sources.json
       - type: git
         url: https://github.com/hrkfdn/ncspot.git
-        tag: v1.1.0
-        commit: 6aa1cd981720d35fad8dc49c2b721f5df6b3cbec
+        tag: v1.1.1
+        commit: 9b54ace1002b15895e08557b4a6fa1a21c0325b5
         x-checker-data:
           type: anitya
           is-main-source: true
