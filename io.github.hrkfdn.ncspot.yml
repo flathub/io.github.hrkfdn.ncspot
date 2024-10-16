@@ -28,7 +28,7 @@ modules:
       - type: git
         url: https://github.com/hrkfdn/ncspot.git
         tag: v1.2.0
-        commit: 9a3b3a098cfa456a213d98ff8a3700ea7974cf3c
+        commit: bfa5653c13607ca28b2ba129a26bc550b0b4cb85
         x-checker-data:
           type: anitya
           is-main-source: true
