@@ -14,7 +14,7 @@ finish-args:
   - --socket=fallback-x11
   - --share=ipc
   # mpris
-  - --own-name=org.mpris.MediaPlayer2.ncspot
+  - --own-name=org.mpris.MediaPlayer2.ncspot.*
   - --talk-name=org.gnome.SessionManager
 build-options:
   append-path: /usr/lib/sdk/rust-stable/bin
